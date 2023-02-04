@@ -6,9 +6,11 @@ import vuetify from './plugins/vuetify'
 
 Vue.config.productionTip = false
 import FirstComponent from '@/components/FirstComponent.vue'
+import CardComponent from '@/components/CardComponent.vue'
+
 //This component has global visibility
 Vue.component('first-c',FirstComponent)
-
+Vue.component('card-c',CardComponent)
 new Vue({
   router,
   store,

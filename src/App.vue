@@ -43,11 +43,9 @@
     </v-app-bar>
 
     <v-main>
-      <first-c></first-c>
-        <first-c></first-c>
-        <first-c></first-c>
-        <first-c></first-c>
-        
+        <first-c>  </first-c>
+        <card-c>   </card-c>
+        <card-c>   </card-c>
       <router-view/>
     </v-main>
   </v-app>
