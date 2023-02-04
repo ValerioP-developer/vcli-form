@@ -7,10 +7,13 @@ import vuetify from './plugins/vuetify'
 Vue.config.productionTip = false
 import FirstComponent from '@/components/FirstComponent.vue'
 import CardComponent from '@/components/CardComponent.vue'
+import ComponentA from '@/components/ComponentA.vue'
 
 //This component has global visibility
 Vue.component('first-c',FirstComponent)
 Vue.component('card-c',CardComponent)
+Vue.component('comp-a',ComponentA)
+
 new Vue({
   router,
   store,

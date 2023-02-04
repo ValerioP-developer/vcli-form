@@ -43,9 +43,13 @@
     </v-app-bar>
 
     <v-main>
-        <first-c>  </first-c>
-        <card-c>   </card-c>
-        <card-c>   </card-c>
+
+      App colore verso A :{{appColor}}
+        <!-- With the vbind I can pass value from the APP variable (here) to set value of Component property  -->
+        <ComponentA v-bind:color="appColor">  </ComponentA>
+        <button @click="appColor = 'Orange'"> Changee </button>
+
+        <ComponentB>  </ComponentB>
       <router-view/>
     </v-main>
   </v-app>
@@ -53,16 +57,20 @@
 
 <script>
 //1Import component in APP 
-//import FirstComponent from '@/components/FirstComponent.vue'
+import ComponentA from '@/components/ComponentA.vue'
+import ComponentB from '@/components/ComponentB.vue'
+
 export default {
   name: 'App',
 //2 add name component
   components:{
-   // 'first-c':FirstComponent
+   
+    ComponentA, ComponentB
   },
-  //note if you want to add a component with global visibility just avoid the imports and add it into the main entrypoint
-  data: () => ({
-    //
-  }),
+  data(){
+     return {
+      appColor:"greennn"
+     }
+  }
 };
 </script>
