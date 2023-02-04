@@ -23,9 +23,14 @@
           src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
           width="100"
         />
+      
       </div>
 
-      <v-spacer></v-spacer>
+      <v-spacer>
+
+    
+
+      </v-spacer>
 
       <v-btn
         href="https://github.com/vuetifyjs/vuetify/releases/latest"
@@ -38,16 +43,26 @@
     </v-app-bar>
 
     <v-main>
+      <first-c></first-c>
+        <first-c></first-c>
+        <first-c></first-c>
+        <first-c></first-c>
+        
       <router-view/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-
+//1Import component in APP 
+//import FirstComponent from '@/components/FirstComponent.vue'
 export default {
   name: 'App',
-
+//2 add name component
+  components:{
+   // 'first-c':FirstComponent
+  },
+  //note if you want to add a component with global visibility just avoid the imports and add it into the main entrypoint
   data: () => ({
     //
   }),

@@ -5,6 +5,9 @@ import store from './store'
 import vuetify from './plugins/vuetify'
 
 Vue.config.productionTip = false
+import FirstComponent from '@/components/FirstComponent.vue'
+//This component has global visibility
+Vue.component('first-c',FirstComponent)
 
 new Vue({
   router,
