@@ -1,8 +1,8 @@
 <template>
-    <div>
-  <h1> First Component  </h1>
-  <h1>  {{vartest}} </h1>
-  <button @click="vartest='yellow'"> Change </button>
+<div>
+        <h1> First Component  </h1>
+        <h1>  {{vartest}} </h1>
+        <button @click="vartest='yellow'"> Change </button>
 </div>
 </template>
 
@@ -16,9 +16,9 @@ export default{
  }
 }
 </script>
-
-<style>
+<!-- with scoped you can only have the style on the related component not globally -->
+<style scoped>
 div{
-    border: 1px solid #000 ;
+    background-color: red ;
 }
 </style>
