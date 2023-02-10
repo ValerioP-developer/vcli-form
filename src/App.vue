@@ -44,12 +44,17 @@
 
     <v-main>
 
-      App colore verso A :{{appColor}}
-        <!-- With the vbind I can pass value from the APP variable (here) to set value of Component property  -->
-        <ComponentA v-bind:color="appColor">  </ComponentA>
-        <button @click="appColor = 'Orange'"> Changee </button>
+      App colore verso A :{{ appColor }}
+        <!-- With the vbind I can pass value from the APP variable (here) to set value of Component property  
+              <ComponentA v-bind:color="appColor">  </ComponentA>
+              <button @click="appColor = 'Orange'"> Changee </button>
+              <ComponentB>  </ComponentB>
+       -->
+       <ComponentA :color="appColor" 
+                    @resetEvent="appColor=$event" >
+       </ComponentA>
 
-        <ComponentB>  </ComponentB>
+       <ComponentB>  </ComponentB>
       <router-view/>
     </v-main>
   </v-app>
